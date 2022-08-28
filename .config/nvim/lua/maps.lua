@@ -14,8 +14,9 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 
 -- Escape to normal mode
 keymap.set('i', 'jjj', '<esc>')
-keymap.set('n', 'WW', ':w<Return>', { silent = true })
-keymap.set('n', 'WQ', ':wq<Return>')
+keymap.set('n', 'ww', ':w<Return>', { silent = true })
+keymap.set('n', 'wq', ':wq<Return>', { silent = true })
+keymap.set('n', 'qq', ':q<Return>', { silent = true })
 keymap.set('n', ',<Space>', ':noh<Return>', { silent = true })
 
 -- Save with root permission (not working for now)

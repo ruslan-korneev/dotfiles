@@ -7,6 +7,7 @@ prettier.setup {
     "css",
     "javascript",
     "javascriptreact",
+    "python",
     "typescript",
     "typescriptreact",
     "json",

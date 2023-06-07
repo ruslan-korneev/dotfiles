@@ -39,7 +39,7 @@ keymap.set('i', 'jj', '<esc>')
 -- Quit, Save, Quit+Save
 keymap.set('n', 'qq', ':q<cr>')
 keymap.set('n', 'ww', ':w<cr>')
-keymap.set('n', 'wq', ':wq<cr>')
+keymap.set('n', 'wq', ':w<cr>')
 keymap.set('n', 'qa', ':q!<cr>')
 
 -- Nohle search

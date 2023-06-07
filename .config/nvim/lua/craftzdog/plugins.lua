@@ -8,6 +8,27 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
+  use { "sitiom/nvim-numbertoggle" }
+  use {
+    'lukoshkin/highlight-whitespace',
+    config = function()
+      require 'highlight-whitespace'.setup {
+        tws = '\\s\\+$',
+        clear_on_winleave = false,
+        user_palette = {
+          python = {
+            tws = 'RosyBrown',
+          },
+          other = {
+            tws = 'PaleVioletRed',
+            ['\\(\\S\\)\\@<=\\s\\(,\\)\\@='] = 'coral1',
+            ['\\(\\S\\)\\@<= \\{2,\\}\\(\\S\\)\\@='] = 'LightGoldenrod3',
+            ['\\t\\+'] = 'plum4',
+          }
+        }
+      }
+    end
+  }
   use {
     'svrana/neosolarized.nvim',
     requires = { 'tjdevries/colorbuddy.nvim' }

@@ -1,17 +1,21 @@
-require('base')
-require('highlights')
-require('maps')
-require('plugins')
+require('craftzdog.base')
+require('craftzdog.highlights')
+require('craftzdog.maps')
+require('craftzdog.plugins')
 
-local has = function(x)
-  return vim.fn.has(x) == 1
-end
+local has = vim.fn.has
 local is_mac = has "macunix"
 local is_win = has "win32"
+local is_wsl = has "wsl"
 
-if is_mac then
-  require('macos')
+if is_mac == 1 then
+  require('craftzdog.macos')
 end
-if is_win then
-  require('windows')
+if is_win == 1 then
+  require('craftzdog.windows')
+end
+if is_wsl == 1 then
+  require('craftzdog.wsl')
+else
+  require('craftzdog.linux')
 end

@@ -12,23 +12,14 @@ keymap.set('n', 'dw', 'vb"_d')
 -- Select all
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
--- Escape to normal mode
-keymap.set('i', 'jjj', '<esc>')
-keymap.set('n', 'ww', ':w<Return>', { silent = true })
-keymap.set('n', 'wq', ':wq<Return>', { silent = true })
-keymap.set('n', 'qq', ':q<Return>', { silent = true })
-keymap.set('n', ',<Space>', ':noh<Return>', { silent = true })
-
 -- Save with root permission (not working for now)
 --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
 
 -- New tab
-keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
-
+keymap.set('n', 'te', ':tabedit')
 -- Split window
-keymap.set('n', 'ss', ':split<Return><C-w>w', { silent = true })
-keymap.set('n', 'sv', ':vsplit<Return><C-w>w', { silent = true })
-
+keymap.set('n', 'ss', ':split<Return><C-w>w')
+keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
 -- Move window
 keymap.set('n', '<Space>', '<C-w>w')
 keymap.set('', 'sh', '<C-w>h')
@@ -41,3 +32,20 @@ keymap.set('n', '<C-w><left>', '<C-w><')
 keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
+
+-- Escape from insert mode
+keymap.set('i', 'jj', '<esc>')
+
+-- Quit, Save, Quit+Save
+keymap.set('n', 'qq', ':q<cr>')
+keymap.set('n', 'ww', ':w<cr>')
+keymap.set('n', 'wq', ':wq<cr>')
+keymap.set('n', 'qa', ':q!<cr>')
+
+-- Nohle search
+keymap.set('n', ',<space>', ':nohlsearch<cr>')
+
+-- Buffer navigation
+keymap.set('n', 'gp', ':bp<cr>')
+keymap.set('n', 'gn', ':bn<cr>')
+keymap.set('n', 'gw', ':Bclose<cr>')

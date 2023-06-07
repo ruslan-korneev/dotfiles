@@ -11,7 +11,10 @@ ts.setup {
     disable = {},
   },
   ensure_installed = {
+    "markdown",
+    "markdown_inline",
     "tsx",
+    "typescript",
     "toml",
     "fish",
     "php",
@@ -20,12 +23,17 @@ ts.setup {
     "swift",
     "css",
     "html",
-    "lua"
+    "lua",
+    "python"
   },
   autotag = {
     enable = true,
   },
+  context_commentstring = {
+    enable         = true,
+    enable_autocmd = false,
+  }
 }
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
+parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx", "python" }

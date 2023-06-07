@@ -48,4 +48,4 @@ keymap.set('n', ',<space>', ':nohlsearch<cr>')
 -- Buffer navigation
 keymap.set('n', 'gp', ':bp<cr>')
 keymap.set('n', 'gn', ':bn<cr>')
-keymap.set('n', 'gw', ':Bclose<cr>')
+keymap.set('n', 'gw', ':bdelete<cr>')

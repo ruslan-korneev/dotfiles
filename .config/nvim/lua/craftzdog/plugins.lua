@@ -8,27 +8,9 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
-  use { "sitiom/nvim-numbertoggle" }
-  use {
-    'lukoshkin/highlight-whitespace',
-    config = function()
-      require 'highlight-whitespace'.setup {
-        tws = '\\s\\+$',
-        clear_on_winleave = false,
-        user_palette = {
-          python = {
-            tws = 'RosyBrown',
-          },
-          other = {
-            tws = 'PaleVioletRed',
-            ['\\(\\S\\)\\@<=\\s\\(,\\)\\@='] = 'coral1',
-            ['\\(\\S\\)\\@<= \\{2,\\}\\(\\S\\)\\@='] = 'LightGoldenrod3',
-            ['\\t\\+'] = 'plum4',
-          }
-        }
-      }
-    end
-  }
+  use { "sitiom/nvim-numbertoggle" } -- number toggle
+
+  -- neosolarized
   use {
     'svrana/neosolarized.nvim',
     requires = { 'tjdevries/colorbuddy.nvim' }
@@ -55,11 +37,6 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
-  -- use { 'numToStr/Comment.nvim',
-  --   requires = {
-  --     'JoosepAlviste/nvim-ts-context-commentstring'
-  --   }
-  -- }
   use 'norcalli/nvim-colorizer.lua'
   use 'folke/zen-mode.nvim'
   use({
@@ -67,7 +44,6 @@ packer.startup(function(use)
     run = function() vim.fn["mkdp#util#install"]() end,
   })
   use 'akinsho/nvim-bufferline.lua'
-  -- use 'github/copilot.vim'
 
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browse

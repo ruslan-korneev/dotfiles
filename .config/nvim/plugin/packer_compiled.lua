@@ -104,12 +104,6 @@ _G.packer_plugins = {
     path = "/home/shaggy/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  ["highlight-whitespace"] = {
-    config = { "\27LJ\2\n“\2\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\3=\3\t\2B\0\2\1K\0\1\0\17user_palette\nother\1\0\4\25\\(\\S\\)\\@<=\\s\\(,\\)\\@=\vcoral1\btws\18PaleVioletRed\31\\(\\S\\)\\@<= \\{2,\\}\\(\\S\\)\\@=\20LightGoldenrod3\t\\t\\+\nplum4\vpython\1\0\0\1\0\1\btws\14RosyBrown\1\0\2\btws\n\\s\\+$\22clear_on_winleave\1\nsetup\25highlight-whitespace\frequire\0" },
-    loaded = true,
-    path = "/home/shaggy/.local/share/nvim/site/pack/packer/start/highlight-whitespace",
-    url = "https://github.com/lukoshkin/highlight-whitespace"
-  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/home/shaggy/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
@@ -223,10 +217,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: highlight-whitespace
-time([[Config for highlight-whitespace]], true)
-try_loadstring("\27LJ\2\n“\2\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\3=\3\t\2B\0\2\1K\0\1\0\17user_palette\nother\1\0\4\25\\(\\S\\)\\@<=\\s\\(,\\)\\@=\vcoral1\btws\18PaleVioletRed\31\\(\\S\\)\\@<= \\{2,\\}\\(\\S\\)\\@=\20LightGoldenrod3\t\\t\\+\nplum4\vpython\1\0\0\1\0\1\btws\14RosyBrown\1\0\2\btws\n\\s\\+$\22clear_on_winleave\1\nsetup\25highlight-whitespace\frequire\0", "config", "highlight-whitespace")
-time([[Config for highlight-whitespace]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

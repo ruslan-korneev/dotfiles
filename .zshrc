@@ -142,3 +142,17 @@ export git_develop_branch=develop
 # kubernetes
 source <(minikube completion zsh)
 source '/home/linuxbrew/.linuxbrew/opt/autoenv/activate.sh'
+
+
+# THIS SHOULD BE IN THE END
+# [set -o vi] mapping keys
+set -o vi
+
+bindkey -M viins 'jj' vi-cmd-mode
+
+# mcfly-search-function() {
+#   mcfly search
+# }
+#
+# zle -N mcfly-search mcfly-search-function
+bindkey -M vicmd '/' mcfly-history-widget

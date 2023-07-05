@@ -13,7 +13,13 @@ telescope.setup {
   defaults = {
     mappings = {
       n = {
-        ["q"] = actions.close
+        ["qq"] = actions.close,
+        ["ts"] = actions.select_horizontal,
+        ["tv"] = actions.select_vertical,
+        ["tn"] = actions.select_tab,
+        -- ["<C-x>"] = actions.select_horizontal,
+        -- ["<C-v>"] = actions.select_vertical,
+        -- ["<C-t>"] = actions.select_tab,
       },
     },
   },
@@ -46,7 +52,7 @@ vim.keymap.set('n', ';f',
   function()
     builtin.find_files({
       no_ignore = false,
-      hidden = true
+      hidden = true,
     })
   end)
 vim.keymap.set('n', ';r', function()

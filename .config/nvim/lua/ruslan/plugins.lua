@@ -54,4 +54,5 @@ packer.startup(function(use)
     requires = { "nvim-telescope/telescope.nvim" }
   }
   use "renerocksai/calendar-vim"
+  -- use "jmbuhr/otter.nvim"
 end)

@@ -119,9 +119,12 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# mcfly
 eval "$(mcfly init zsh)"
 
 export PATH=$HOME/.local/bin:$PATH
@@ -156,3 +159,21 @@ bindkey -M viins 'jj' vi-cmd-mode
 #
 # zle -N mcfly-search mcfly-search-function
 bindkey -M vicmd '/' mcfly-history-widget
+
+# Yank to the system clipboard
+# vi-append-x-selection () { RBUFFER=$(xsel -o -p </dev/null)$RBUFFER; }
+# zle -N vi-append-x-selection
+# bindkey -a '^X' vi-append-x-selection
+# vi-yank-x-selection () { print -rn -- $CUTBUFFER | xclip -i -p; }
+# zle -N vi-yank-x-selection
+# bindkey -a '^Y' vi-yank-x-selection
+
+# 1password ssh
+# export SSH_AUTH_SOCK=~/.1password/agent.sock
+# ssh-add -l
+
+# powerlevel10k
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
+
+# for git diff
+# sudo npm i diff-so-fancy --global

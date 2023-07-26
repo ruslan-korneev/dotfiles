@@ -2,7 +2,7 @@
   excludesfile = /home/shaggy/.gitignore_global
   editor = nvim
   ignorecase = false
-	pager = diff-so-fancy | bat --theme gruvbox-dark
+	pager = delta --dark
 [user]
   name = Ruslan
   email = shaggybackend@gmail.com
@@ -15,6 +15,14 @@
   interactive = auto
   grep = auto
 	ui = true
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
 [alias]
   hist = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
 [github]

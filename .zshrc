@@ -126,6 +126,9 @@ eval "$(pyenv init -)"
 
 # mcfly
 eval "$(mcfly init zsh)"
+export MCFLY_PROMPT="❯"
+export MCFLY_DISABLE_MENU=TRUE
+export MCFLY_KEY_SCHEME=vim
 
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/tools/nvim-linux64/bin:$PATH

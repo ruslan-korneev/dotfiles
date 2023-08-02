@@ -32,9 +32,43 @@ packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = function() require("nvim-treesitter.install").update({ with_sync = true }) end,
   }
-  use "kyazdani42/nvim-web-devicons" -- File icons
   use "nvim-telescope/telescope.nvim"
   use "nvim-telescope/telescope-file-browser.nvim"
+  use "MunifTanjim/nui.nvim"
+  use {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    },
+    config = function()
+      require("neo-tree").setup({
+        close_if_last_window = true,
+        window = {
+          width = 30,
+        },
+        buffers = {
+          follow_current_file = true,
+        },
+        filesystem = {
+          follow_current_file = true,
+          filtered_items = {
+            hide_dotfiles = true,
+            hide_gitignored = true,
+            never_show = {
+              ".DS_Store",
+              ".idea",
+              "__pycache__",
+            },
+          },
+        },
+      })
+    end
+  }
+  use "nvim-tree/nvim-web-devicons"
+  use "vijaymarupudi/nvim-fzf"
   use "windwp/nvim-autopairs"
   use "windwp/nvim-ts-autotag"
   use "norcalli/nvim-colorizer.lua"
@@ -54,5 +88,4 @@ packer.startup(function(use)
     requires = { "nvim-telescope/telescope.nvim" }
   }
   use "renerocksai/calendar-vim"
-  -- use "jmbuhr/otter.nvim"
 end)

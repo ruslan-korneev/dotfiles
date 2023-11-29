@@ -88,4 +88,7 @@ packer.startup(function(use)
     requires = { "nvim-telescope/telescope.nvim" }
   }
   use "renerocksai/calendar-vim"
+
+  -- AI pair programmers
+  use "Exafunction/codeium.vim"
 end)

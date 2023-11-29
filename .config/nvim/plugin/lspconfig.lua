@@ -79,6 +79,23 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
+-- nvim_lsp.pylsp.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+--   cmd = { "pylsp" },
+--   filetypes = { "python" },
+--   settings = {
+--     pylsp = {
+--       plugins = {
+--         pycodestyle = {
+--           ignore = { 'W391' },
+--           maxLineLength = 100
+--         }
+--       }
+--     }
+--   }
+-- }
+
 nvim_lsp.pyright.setup {
   on_attach = on_attach,
   filetypes = { "python" },
@@ -93,6 +110,8 @@ nvim_lsp.pyright.setup {
     }
   }
 }
+
+-- require 'lspconfig'.ruff_lsp.setup {}
 
 nvim_lsp.sourcekit.setup {
   on_attach = on_attach,
@@ -138,11 +157,11 @@ nvim_lsp.astro.setup {
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
-  underline = true,
-  update_in_insert = false,
-  virtual_text = { spacing = 4, prefix = "●" },
-  severity_sort = true,
-}
+    underline = true,
+    update_in_insert = false,
+    virtual_text = { spacing = 4, prefix = "●" },
+    severity_sort = true,
+  }
 )
 
 -- Diagnostic symbols in the sign column (gutter)

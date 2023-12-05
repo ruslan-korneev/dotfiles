@@ -64,3 +64,7 @@ keymap.set("n", "qq", ":q<cr>")
 keymap.set("n", "ww", ":w<cr>")
 keymap.set("n", "wq", ":w<cr>")
 keymap.set("n", "qa", ":q!<cr>")
+
+-- Switch Pane
+keymap.set("n", "<space>", "<C-w>w")
+keymap.set("n", "<S-space>", "<C-w>W")

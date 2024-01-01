@@ -19,8 +19,10 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.ui.mini-animate" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
     { import = "lazyvim.plugins.extras.formatting.black" },
+    { import = "lazyvim.plugins.extras.lsp.none-ls" },
     -- import/override with your plugins
     { import = "plugins" },
+    { import = "plugins.extras" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.

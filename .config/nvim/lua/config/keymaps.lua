@@ -51,9 +51,9 @@ keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
 end, opts)
 
-keymap.set("n", "<leader>r", function()
-  require("craftzdog.utils").replaceHexWithHSL()
-end)
+-- keymap.set("n", "<leader>r", function()
+--   require("craftzdog.utils").replaceHexWithHSL()
+-- end)
 
 -- Another
 keymap.set("i", "jj", "<Esc>") -- escape to command mode
@@ -68,3 +68,7 @@ keymap.set("n", "qa", ":q!<cr>")
 -- Switch Pane
 keymap.set("n", "<space>", "<C-w>w")
 keymap.set("n", "<S-space>", "<C-w>W")
+
+-- Buffer navigation
+keymap.set("n", "gn", ":bn<cr>")
+keymap.set("n", "gp", ":bp<cr>")

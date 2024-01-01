@@ -2,6 +2,10 @@ return {
   "telescope.nvim",
   dependencies = {
     "nvim-telescope/telescope-file-browser.nvim",
+    "nvim-lua/popup.nvim",
+    "nvim-lua/plenary.nvim",
+    "nvim-telescope/telescope-media-files.nvim",
+    -- "ruslan-korneev/youtrack.nvim",
   },
   keys = {
     {
@@ -60,6 +64,13 @@ return {
         builtin.treesitter()
       end,
     },
+    -- {
+    --   "<leader>R",
+    --   function()
+    --     local builtin = require("telescope.builtin")
+    --     builtin.lsp_references()
+    --   end,
+    -- },
     {
       "sf",
       function()
@@ -91,8 +102,8 @@ return {
       layout_strategy = "horizontal",
       layout_config = { prompt_position = "top" },
       sorting_strategy = "ascending",
-      prompt_prefix = " ",
-      selection_caret = " ",
+      prompt_prefix = "  ",
+      selection_caret = "  ",
       path_display = { "smart" },
       file_ignore_patterns = { ".git/", "node_modules" },
       color_devicons = true,
@@ -115,6 +126,13 @@ return {
       },
     }
     opts.extensions = {
+      -- youtrack = {
+      --   url = "https://example.youtrack.cloud",
+      --   token = "perm:...",
+      --   query = "assignee: me state: {To Do}, {In progress}, Backlog",
+      -- },
+
+      -- File Browser
       file_browser = {
         theme = "dropdown",
         -- disables newtr and use telescope file browser in its place
@@ -135,9 +153,15 @@ return {
           },
         },
       },
+      media_files = {
+        filetypes = { "png", "jpg", "jpeg", "pdf", "svg" },
+        find_cmd = "rg",
+      },
     }
     telescope.setup(opts)
     require("telescope").load_extension("fzf")
     require("telescope").load_extension("file_browser")
+    require("telescope").load_extension("media_files")
+    -- require("telescope").load_extension("youtrack")
   end,
 }

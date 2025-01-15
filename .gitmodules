@@ -4,3 +4,6 @@
 [submodule ".config/tmux"]
 	path = .config/tmux
 	url = git@github.com:ruslan-korneev/tmux-config.git
+[submodule ".config/alacritty"]
+	path = .config/alacritty
+	url = git@github.com:ruslan-korneev/alacritty-config.git

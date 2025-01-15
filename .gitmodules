@@ -1,0 +1,12 @@
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = git@github.com:ruslan-korneev/neovim-config.git
+[submodule ".config/tmux"]
+	path = .config/tmux
+	url = git@github.com:ruslan-korneev/tmux-config.git
+[submodule ".config/alacritty"]
+	path = .config/alacritty
+	url = git@github.com:ruslan-korneev/alacritty-config.git
+[submodule ".config/pgcli"]
+	path = .config/pgcli
+	url = git@github.com:ruslan-korneev/pgcli-config.git

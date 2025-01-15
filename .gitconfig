@@ -1,11 +1,12 @@
 [core]
-  excludesfile = /home/shaggy/.gitignore_global
   editor = nvim
   ignorecase = false
 	pager = delta --dark
+	excludesfile = /Users/ruslankorneev/.gitignore
 [user]
   name = Ruslan
-  email = shaggybackend@gmail.com
+  email = admin@ruslan.beer
+  signingkey = DD3E58D7D3D710B0AE07A0D3BAE55AA568880CB8
 [init]
   defaultBranch = master
 [color]
@@ -14,11 +15,12 @@
   branch = auto
   interactive = auto
   grep = auto
-	ui = true
+  ui = true
 [interactive]
     diffFilter = delta --color-only
 [delta]
     navigate = true
+    side-by-side = true
 [merge]
     conflictstyle = diff3
 [diff]
@@ -46,3 +48,7 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[push]
+	autoSetupRemote = true
+[commit]
+	gpgsign = true

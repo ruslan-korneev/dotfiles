@@ -1,9 +1,3 @@
-# dotfiles to make ur terminal-life fun
+# The list of my dotfiles
 
-# Installation and Usage
-## NeoVim
-Comming soon ...
-## Tmux
-Comming soon ...
-## OhMyZsh
-Comming soon ...
+enjoy:)
